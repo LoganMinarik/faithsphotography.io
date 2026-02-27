@@ -1,6 +1,9 @@
 console.log('Hello from script.js');
 console.log(':3');
 
+import(chalk)
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     toggleButton.addEventListener('click', () => {
