@@ -130,6 +130,23 @@ h2 {
     cursor: pointer;
 }
 
+.card-clear{
+
+    padding: 1.5rem;
+    border-radius: 8px;
+
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-clear:hover{
+    transform: scale(1.05);
+    z-index: 10;
+}
+
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -159,6 +176,17 @@ h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 10;
     transition: transform 0.5s ease, box-shadow 0.5s ease;}
+
+.floaty-clear {transform: scale(1);
+    z-index: 10;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;}
+
+.floaty-clear:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 
 .floaty:hover{
     transform: scale(1.05);
