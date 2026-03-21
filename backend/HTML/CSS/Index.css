@@ -166,8 +166,8 @@ h2 {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 50%; /* Force it to be half width */
+    max-width: none; /* Remove any max-width constraints */
 }
 
 /* Caption of Modal Image */
@@ -493,6 +493,37 @@ nav {
 
 }
 
+/* Sticky Menu Bar */
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sticky-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sticky-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sticky-menu li a:hover {
+    background-color: #555;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -516,6 +547,10 @@ nav {
     .card, .card-clear {
         flex-basis: 100%;
         max-width: 90%;
+    }
+
+    .modal-content {
+        width: 90%; /* On smaller screens, take up more space */
     }
 }
 
