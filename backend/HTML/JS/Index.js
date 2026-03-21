@@ -74,11 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = this.closest('.card');
                 if (card) {
                     const img = card.querySelector('img');
+                    // title could be missing, we should handle it gracefully
                     const title = card.querySelector('h3');
-                    if (img && title) {
+                    if (img) {
                         modal.style.display = "block";
                         modalImg.src = img.src;
-                        captionText.innerHTML = title.innerText;
+                        if (title) {
+                            captionText.innerHTML = title.innerText;
+                        } else {
+                             captionText.innerHTML = "";
+                        }
                     }
                 }
             });
@@ -118,6 +123,7 @@ function loadScript(url) {
     document.head.appendChild(script);
 }
 
-
-loadScript("Zoom.js");
-console.log("Zoom.js loaded")
+// Ensure the path is correct depending on where the script is invoked from
+// Commenting this out since the zoom functionality is now within the main DOMContentLoaded block
+// loadScript("Zoom.js");
+// console.log("Zoom.js loaded")
