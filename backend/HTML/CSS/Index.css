@@ -20,14 +20,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem; /* Added horizontal padding to prevent touching edges */
     width: 100%;
 }
 
 .main-logo {
+     /* Adjust size as needed */
+    height: auto;
+    display: block;
+}
+
+.main-logo-camera-icon {
     max-width: 300px; /* Adjust size as needed */
     height: auto;
     display: block;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure it scales properly within its container */
+}
+
+.logo-container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem; /* Added horizontal padding to prevent touching edges */
+    width: 100%;
+}
+
+.logo-container-1 img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure it scales properly within its container */
+}
+
+.logo-container-camera img {
+    max-width: 300%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure it scales properly within its container */
+}
+
+.logo-container-camera {
+}
+
+.max-width300{
+    max-width: 300px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.max-width300 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 small {
@@ -561,6 +616,10 @@ html {
 
     .main-logo {
         max-width: 250px;
+    }
+
+    .logo-container {
+        padding: 2rem 5%; /* More horizontal padding on mobile */
     }
 
     .section-content {
