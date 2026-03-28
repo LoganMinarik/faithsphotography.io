@@ -83,6 +83,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
+    align-items: stretch; /* Make cards stretch to equal heights */
 }
 
 /* Card Styles */
@@ -97,6 +98,8 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative; /* For positioning the zoom button */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
 }
 
 .card:hover {
@@ -105,12 +108,27 @@ h2 {
     z-index: 10;
 }
 
+/* Make image container take up available space and center image */
 .card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Change back to cover for uniform card sizes, will fix later if asked */
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: auto; /* Push text to the bottom */
 }
+
+/* Ensure text is at the bottom and uniform */
+.card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.card p {
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+}
+
 
 .card-clear{
     padding: 1.5rem;
@@ -141,6 +159,7 @@ h2 {
     font-size: 0.8rem;
     opacity: 0; /* Hidden by default */
     transition: opacity 0.3s ease;
+    z-index: 5;
 }
 
 .card:hover .zoom-btn {
@@ -494,6 +513,11 @@ nav {
 }
 
 /* Sticky Menu Bar */
+html {
+  scroll-padding-top: 80px; /* Offset for sticky menu */
+  scroll-behavior: smooth;
+}
+
 .sticky-menu {
     position: sticky;
     top: 0;
