@@ -587,6 +587,8 @@ html {
     /* Mobile-friendly scrolling additions below */
     overflow-x: auto; /* allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    display: flex; /* add this to allow justify-content to center */
+    justify-content: center; /* center the content horizontally on larger screens */
 }
 
 /* Optional: hide scrollbar for cleaner look, works in webkit browsers */
@@ -656,6 +658,9 @@ html {
 
     .modal-content {
         width: 90%; /* On smaller screens, take up more space */
+    }
+    .sticky-menu {
+        justify-content: flex-start; /* Ensure left alignment on smaller screens for scrolling */
     }
 }
 
